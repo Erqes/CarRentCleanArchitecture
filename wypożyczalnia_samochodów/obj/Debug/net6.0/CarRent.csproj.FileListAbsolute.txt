@@ -179,3 +179,9 @@ E:\CarLend\wypożyczalnia_samochodów\obj\Debug\net6.0\refint\CarRent.dll
 E:\CarLend\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.pdb
 E:\CarLend\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.genruntimeconfig.cache
 E:\CarLend\wypożyczalnia_samochodów\obj\Debug\net6.0\ref\CarRent.dll
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.csproj.AssemblyReference.cache
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.AssemblyInfoInputs.cache
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.AssemblyInfo.cs
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.csproj.CoreCompileInputs.cache
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\wypożyczalnia_samochodów\obj\Debug\net6.0\CarRent.MvcApplicationPartsAssemblyInfo.cache

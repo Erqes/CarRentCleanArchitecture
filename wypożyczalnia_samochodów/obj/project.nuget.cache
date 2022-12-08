@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EMxt5b7gvig4iLiag/E+sMcp9LOOKnMf2LME/1iFF93ubdXj2xbUH/lQKHpMtLGb/6tgUafzQo/41Fqo0diIsA==",
+  "dgSpecHash": "yVTiTurazGOeNXii1X+twL9fi6NbEeHFIImXhmyB01HN+jg0HY7qZKnkUqpEcCbk28A6M7BW3q/GS9SVDk7MSg==",
   "success": true,
-  "projectFilePath": "E:\\CarLend\\wypożyczalnia_samochodów\\CarRent.csproj",
+  "projectFilePath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\wypożyczalnia_samochodów\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pavel\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\pavel\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
