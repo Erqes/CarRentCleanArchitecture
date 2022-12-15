@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Application.Exceptions;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
@@ -12,11 +13,16 @@ namespace UI.Middleware
 			try
 			{
 				await next.Invoke(context);
-			}
-			catch (InvalidOperationException e)
-			{
-				await context.Response.WriteAsync("Nie można wypożyczyć auta o danym Id");
-			}
+			}	
+            catch(BadRequestException e)
+            {
+                context.Response.StatusCode = 404;
+                await context.Response.WriteAsync(e.Message);
+            }
+            //catch(InvalidOperationException e)
+            //{
+            //    await context.Response.WriteAsync("Złe Id");
+            //}
 			catch(InvalidEnumArgumentException e)
 			{
                 await context.Response.WriteAsync("Zła klasa");

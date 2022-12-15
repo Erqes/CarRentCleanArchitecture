@@ -35,8 +35,8 @@
               "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\Emails.csproj": {
+                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\Emails.csproj"
               }
             }
           }
@@ -51,6 +51,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[3.4.2, )"
@@ -201,14 +205,14 @@
         }
       }
     },
-    "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\Emails.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\Emails.csproj",
+        "projectName": "Emails",
+        "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\Emails.csproj",
         "packagesPath": "C:\\Users\\pavel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -228,11 +232,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -300,6 +300,120 @@
         }
       }
     },
+    "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\pavel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Application\\Application.csproj"
+              },
+              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.4.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.4.2, )"
+            },
+            "System.Linq.Async": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\wypożyczalnia_samochodów\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -330,6 +444,15 @@
             "projectReferences": {
               "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Application\\Application.csproj": {
                 "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Application\\Application.csproj"
+              },
+              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\Emails.csproj": {
+                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Emails\\Emails.csproj"
+              },
+              "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -344,6 +467,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[3.4.2, )"
@@ -355,6 +482,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.12, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

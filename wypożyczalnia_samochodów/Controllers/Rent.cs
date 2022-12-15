@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Application.Services;
 using Application.Requests;
 using Application.Models;
 using MediatR;
 using Application.Methods.Queries;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UI.Controllers
 {
@@ -14,17 +14,16 @@ namespace UI.Controllers
     [Route("rents")]
     public class RentController : ControllerBase
     {
-        private readonly ICarRentService _carRentService;
+        
         private readonly IMediator _mediator;
-        public RentController(ICarRentService carRentService, IMediator mediator)
+        public RentController( IMediator mediator)
         {
-            _carRentService = carRentService;
             _mediator = mediator;
         }
         [HttpGet("count")]
         public async Task<object> Count([FromBody] LendParams lendParams)
         {
-            var count =new CalculateRentalCost(lendParams.CarClass,lendParams.Km,lendParams.From, lendParams.To, lendParams.DriveLicense);      
+            var count =new CalculateRentalCost(lendParams.CarClass,lendParams.Km,lendParams.From, lendParams.To, lendParams.DriveLicense);
             return await _mediator.Send(count);
         }
         [HttpGet]

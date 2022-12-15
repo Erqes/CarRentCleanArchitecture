@@ -1,0 +1,14 @@
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\bin\Debug\net6.0\EmailSending.deps.json
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\bin\Debug\net6.0\EmailSending.runtimeconfig.json
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\bin\Debug\net6.0\EmailSending.dll
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\bin\Debug\net6.0\EmailSending.pdb
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.csproj.AssemblyReference.cache
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.AssemblyInfoInputs.cache
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.AssemblyInfo.cs
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.csproj.CoreCompileInputs.cache
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.dll
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\refint\EmailSending.dll
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.pdb
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\EmailSending.genruntimeconfig.cache
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\EmailSending\obj\Debug\net6.0\ref\EmailSending.dll

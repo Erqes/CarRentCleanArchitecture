@@ -10,10 +10,11 @@ namespace Infrastructure.DbContexts.FluentApi
         {
             builder.HasMany(e => e.Customers)
                 .WithOne(c => c.Employee)
-                .HasForeignKey(c => c.EmployeeId);
+                .HasForeignKey(c => c.EmployeeId).OnDelete(DeleteBehavior.ClientSetNull);
             builder.Property(wi => wi.Phone)
                 .IsRequired()
-                .HasMaxLength(9);
+                .HasMaxLength(10);
+            builder.Property(e => e.Email).IsRequired();
         }
     }
 }

@@ -22,7 +22,8 @@ namespace Infrastructure.DbContexts.FluentApi
                 {
                     r.HasKey(x => new { x.CarId, x.CustomerId });
                 });
-
+            builder.Property(e=>e.Email).IsRequired();
+            
         }
     }
 }

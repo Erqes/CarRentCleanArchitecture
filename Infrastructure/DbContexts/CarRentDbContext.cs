@@ -1,26 +1,33 @@
 ﻿using System.Reflection;
+using System.Threading;
 using Domain.Entites;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Application.Interfaces;
 
 namespace Infrastructure.DbContexts
 {
-    public class CarRentDbContext : DbContext
+    public class CarRentDbContext : DbContext, ICarRentDbContext
     {
         private readonly IConfiguration _configuration;
-        public CarRentDbContext(IConfiguration configuration)
+        private readonly IMediator _mediator;
+
+        public CarRentDbContext(IConfiguration configuration, IMediator mediator)
         {
             _configuration = configuration;
+            _mediator = mediator;
         }
         public DbSet<CarRental> CarRents { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Rent> Rents { get; set; }
+        public DbSet<Role> Roles { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("CarRentDbContextString"),
-                b => b.MigrationsAssembly("Infrastructure"));
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("CarRentDbContextString"));
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -60,6 +67,10 @@ namespace Infrastructure.DbContexts
 
 
 
+        }
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+        {
+            return await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
         }
     }
 }

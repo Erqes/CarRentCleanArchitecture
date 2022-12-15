@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Application.Requests;
-using Application.Services;
 using Application.Methods.Commands;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace UI.Controllers
 {
@@ -11,20 +12,22 @@ namespace UI.Controllers
     [Route("reservations")]
     public class ReservationController : ControllerBase
     {
-        private readonly IReservationService _reservationService;
         private readonly IMediator _mediator;
-        public ReservationController(IReservationService reservationService, IMediator mediator)
+        public ReservationController( IMediator mediator)
         {
-            _reservationService = reservationService;
             _mediator = mediator;
         }
         [HttpPost("reserve")]
+        [Authorize(Roles ="User")]
         public async Task<ActionResult> Reservation([FromBody] ReservationParams request)
         {
-            var result = new Reserve(request.CarsId, request.Name, request.LastName, request.Address, request.PostalCode, request.Phone, request.Email, request.From, request.To);
+            var userId = int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
+            var result = new Reserve(request.CarsId, userId, request.From, request.To);
             return Ok(await _mediator.Send(result));
         }
         [HttpPut("{Id}")]
+        [Authorize(Roles ="Employee")]
+        [Authorize(Roles ="Administrator")]
         public async Task<ActionResult> CarReturn([FromRoute] int id)
         {
             var returnedSuccessfully = new CarReturn(id);

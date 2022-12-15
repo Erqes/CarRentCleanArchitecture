@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "tci4vcLxbMrHF+UBlGkyKcWgLfjWMLP3S9KVrQtTXhrK8pLjZeAIlamfUj0KKYNjfoEhWmkDqK3Fh3W8ALcnlg==",
+  "dgSpecHash": "QRIpTVcd4W+vgrQ1isOMPokeF6BHxN1pEH3iR0TgV5TJlNLw8bYFb9X5wLP6C8L05GGnRlRfrcpqRxWA1ASn5Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\pavel\\Documents\\GitHub\\CarRentCleanArchitecture\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pavel\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\pavel\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\pavel\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\pavel\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\pavel\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\pavel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pavel\\.nuget\\packages\\mailkit\\3.4.2\\mailkit.3.4.2.nupkg.sha512",
     "C:\\Users\\pavel\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",

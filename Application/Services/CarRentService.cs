@@ -3,7 +3,7 @@ using Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 using Application.Requests;
-using Infrastructure.DbContexts;
+using Application.Interfaces;
 using Application.Models;
 
 namespace Application.Services
@@ -18,8 +18,8 @@ namespace Application.Services
     public class CarRentService : ICarRentService
     {
 
-        private readonly CarRentDbContext _dbContext;
-        public CarRentService(CarRentDbContext dbContext)
+        private readonly ICarRentDbContext _dbContext;
+        public CarRentService(ICarRentDbContext dbContext)
         {
             _dbContext = dbContext;
         }

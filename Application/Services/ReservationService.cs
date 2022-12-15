@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Domain.Entites;
 using Application.Requests;
-using Infrastructure.DbContexts;
+using Application.Interfaces;
 
 namespace Application.Services
 {
@@ -19,8 +19,10 @@ namespace Application.Services
     public class ReservationService : IReservationService
     {
         private readonly IConfiguration _configuration;
-        private readonly CarRentDbContext _dbContext;
-        public ReservationService(IConfiguration configuration, CarRentDbContext dbContext)
+        private readonly ICarRentDbContext _dbContext;
+        private CancellationToken cancellationToken;
+
+        public ReservationService(IConfiguration configuration, ICarRentDbContext dbContext)
         {
             _dbContext = dbContext;
             _configuration = configuration;
@@ -31,6 +33,7 @@ namespace Application.Services
             if (reservationParams != null)
             {
                 customer.Name = reservationParams.Name;
+                customer.City = reservationParams.City;
                 customer.LastName = reservationParams.LastName;
                 customer.Email = reservationParams.Email;
                 customer.Phone = reservationParams.Phone;
@@ -63,7 +66,7 @@ namespace Application.Services
 
             customer.EmployeeId = employee.Id;
             await _dbContext.Customers.AddAsync(customer);
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(cancellationToken);
             List<Rent> NewRents = new List<Rent>();
             for (int i = 0; i < carsToReserve.Count; i++)
             {
@@ -76,7 +79,7 @@ namespace Application.Services
 
             }
 
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(cancellationToken);
             await Send(reservationParams, _configuration.GetSection("EmailUserName").Value);
             await Send(reservationParams, reservationParams.Email);
             return "Zarezerwowano";
@@ -86,10 +89,10 @@ namespace Application.Services
             var carToReturn =await _dbContext.Rents.FirstOrDefaultAsync(r => r.CarId == carId);
             if (carToReturn is null) { return false; }
             _dbContext.Rents.Remove(carToReturn);
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(cancellationToken);
             var changeCarStatus = await _dbContext.Cars.FirstOrDefaultAsync(c => c.Id == carId);
             changeCarStatus.IsCar = true;
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(cancellationToken);
             return true;
         }
 

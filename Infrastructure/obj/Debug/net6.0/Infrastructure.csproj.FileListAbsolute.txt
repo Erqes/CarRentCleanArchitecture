@@ -2,8 +2,12 @@ C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debu
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Application.dll
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Domain.dll
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Emails.dll
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Application.pdb
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Domain.pdb
+C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\bin\Debug\net6.0\Emails.pdb
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\pavel\Documents\GitHub\CarRentCleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache

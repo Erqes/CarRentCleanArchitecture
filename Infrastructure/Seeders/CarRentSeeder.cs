@@ -14,6 +14,12 @@ namespace Infrastructure.Seeders
         {
             if (_dbContext.Database.CanConnect())
             {
+                if (!_dbContext.Roles.Any())
+                {
+                    var roles = GetRoles();
+                    _dbContext.Roles.AddRange(roles);
+                    _dbContext.SaveChanges();
+                }
                 if (!_dbContext.CarRents.Any())
                 {
                     var carRents = GetCarRents();
@@ -21,6 +27,26 @@ namespace Infrastructure.Seeders
                     _dbContext.SaveChanges();
                 }
             }
+        }
+        private IEnumerable<Role> GetRoles()
+        {
+            var roles = new List<Role>()
+            {
+                new Role()
+                {
+                    Name="User"
+                },
+                new Role()
+                {
+                    Name="Administrator"
+                },
+                new Role()
+                {
+                    Name="Employee"
+                },
+
+            };
+            return roles;
         }
         private IEnumerable<CarRental> GetCarRents()
         {
@@ -83,20 +109,9 @@ namespace Infrastructure.Seeders
                          }
 
                     },
-                    Employees=new List<Employee>()
-                    {
-                        new Employee()
-                        {
-                            Name="Bogdan",
-                            LastName="Brzęczyszczykiewicz",
-                            Email="os@gmail.com",
-                            Phone="888777999",
-
-                        },
-                    },
+                    
 
                 },
-            new CarRental()
 
         };
             return carRents;
